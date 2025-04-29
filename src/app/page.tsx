@@ -13,7 +13,7 @@ let API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787';
 if (ENVIRONMENT !== 'development') {
   API_URL = '';
 }*/
-let API_URL = 'https://cloudfare-nextjs.jrbofficial31.workers.dev/';
+const API_URL = 'https://cloudfare-nextjs.jrbofficial31.workers.dev';
 
 
 export default function TodoApp() {
