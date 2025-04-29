@@ -12,6 +12,7 @@ interface UpdateTodoRequest {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    console.log(`Incoming request to: ${url.pathname}`); // Add this line
     const path = url.pathname;
     const method = request.method;
 
