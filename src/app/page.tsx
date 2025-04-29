@@ -8,11 +8,12 @@ interface Todo {
   completed: boolean;
   createdAt: string;
 }
-const ENVIRONMENT = process.env.NEXT_PUBLIC_ENVIRONMENT || 'development';
+/*const ENVIRONMENT = process.env.NEXT_PUBLIC_ENVIRONMENT || 'development';
 let API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787';
 if (ENVIRONMENT !== 'development') {
   API_URL = '';
-}
+}*/
+let API_URL = 'https://cloudfare-nextjs.jrbofficial31.workers.dev/';
 
 
 export default function TodoApp() {
