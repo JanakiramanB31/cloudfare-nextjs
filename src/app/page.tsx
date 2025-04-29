@@ -8,8 +8,12 @@ interface Todo {
   completed: boolean;
   createdAt: string;
 }
+const ENVIRONMENT = process.env.NEXT_PUBLIC_ENVIRONMENT || 'development';
+let API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787';
+if (ENVIRONMENT !== 'development') {
+  API_URL = '';
+}
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787';
 
 export default function TodoApp() {
   const [todos, setTodos] = useState<Todo[]>([]);
